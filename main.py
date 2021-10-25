@@ -1,3 +1,5 @@
+from typing import final
+
 from bs4 import BeautifulSoup
 import requests
 import csv
@@ -17,12 +19,6 @@ for url in urlLists:
     with open('myfile1.txt', 'a',encoding = 'utf-8') as f:
         for items in result:
             final = items.text.strip()
+            print(result)
             f.write("%s\n" % final)
-            f.write("end")
-# for items in result:
- #            print(items.text.strip())
- #            final =items.text.strip()
- #            f.write("%s\n" % final)
-# with open("khorooji.txt","w",encoding='utf-8') as OutPutFile:
-#     OutPutFile.write(str(final))
-#     OutPutFile.close()
+            f.write("**********************")
